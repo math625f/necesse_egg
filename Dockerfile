@@ -1,5 +1,7 @@
 FROM cm2network/steamcmd
 
+USER root
+
 RUN adduser --disabled-password --home /home/container container
 
 USER container
