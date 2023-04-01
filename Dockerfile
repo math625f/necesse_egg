@@ -1,10 +1,8 @@
 FROM cm2network/steamcmd
 
-WORKDIR /home/steam
+RUN mkdir /home/steam/server
 
-RUN mkdir server
-
-RUN ./steamcmd.sh @ShutdownOnFailedCommand 1 @NoPromptForPassword 1 force_install_dir /home/steam/server login anonymous app_update ${APP_ID} validate quit
+RUN /home/steam/steamcmd/steamcmd.sh @ShutdownOnFailedCommand 1 @NoPromptForPassword 1 force_install_dir /home/steam/server login anonymous app_update ${APP_ID} validate quit
  
 USER root
 
