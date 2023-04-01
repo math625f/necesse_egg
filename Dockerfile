@@ -10,7 +10,7 @@ USER root
 
 RUN adduser --disabled-password --home /home/container container
 
-RUN cp /home/steam/server /home/container
+RUN cp -r /home/steam/server /home/container
 
 USER container
 ENV  USER=container HOME=/home/container
