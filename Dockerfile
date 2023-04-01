@@ -1,6 +1,6 @@
 FROM cm2network/steamcmd
 
-RUN apt install --update curl ca-certificates openssl git tar bash sqlite fontconfig
+RUN apt install curl ca-certificates openssl git tar bash sqlite fontconfig
 run adduser --disabled-password --home /home/container container
 
 USER container
